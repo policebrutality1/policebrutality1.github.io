@@ -11,17 +11,16 @@
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Vollkorn" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Artifika" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
 
     <link href="/static/css/policestyle.css" rel="stylesheet">
     <script type="text/javascript" src="/static/js/policestyle.js"></script>
-
 <style>
-/* The Modal (background) */
+   /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -31,18 +30,18 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: auto;
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -50,7 +49,7 @@
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
@@ -59,65 +58,77 @@
 
 
 
+
     <title>END POLICE BRUTALITY</title>
     <link rel="shortcut icon" href="/static/img/favicon.ico.ico">
 
+
   </head>
-  <body >
+  <body onload="myFunction()">
 
-<script>
-
-// Get the modal
-var modal = document.getElementById('myModal');
-
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-window.onload = function myFunction(){
-   myModal.style.display = "block";
-};
-
-
-// When the user clicks on <span> (x), close the modal
-close.onclick = function() {
-    myModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        myModal.style.display = "none";
-    }
-}
-
-</script>
-
-
-<!-- The Modal-->
-<div id="myModal" class="modal">
+  <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <h1>Black Lives Lost in 2016</h1>
     <iframe width='100%' height='520' frameborder='0' src='https://samswey.carto.com/viz/0d44bd96-31d3-11e5-8953-0e9d821ea90d/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+</p>
   </div>
 
 </div>
 
+<script>
+
+// Get the modal
+
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+var myFunction= function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
 
 
 
-<ul id="special">
-  <li id="reallyspecial"><a href="#home">END POLICE BRUTALITY</a></li>
-    <li id="special"><a href="#comment">Comment</a></li>
-  <li id="special"><a href="#bottom">Local Protests</a></li>
-  <li id="special"><a href="#middle">Your Rights</a></li>
-  <li  id="special"><a href="#top">Stats</a></li>
 
+
+
+
+
+
+
+<div class="header">
+  <a href="#home" class="logo">END POLICE BRUTALITY</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li ><a href="#comment">Comment</a></li>
+  <li><a href="#bottom">Local Protests</a></li>
+  <li><a href="#middle">Your Rights</a></li>
+  <li ><a href="#top">Stats</a></li>
+  </ul>
+</div>
 
 
   <!--<li class="dropdown">
